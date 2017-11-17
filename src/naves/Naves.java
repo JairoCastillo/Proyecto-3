@@ -22,10 +22,10 @@ public class Naves  {
     public static void main(String[] args) {
        // Arreglo para el panel
        ArrayList obj = new ArrayList ();
-       //coordenadas
+       //coordenadas posciones
        Dat coor1= new Dat (250,250);
        Dat coor2= new Dat (500,250);
-       //graficos
+       //graficos 
        HAste h= new HAste(coor1,70,70,Color.BLACK);
        HDis h2= new HDis(coor2,50,Color.BLUE);
       
