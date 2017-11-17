@@ -25,18 +25,27 @@ public class Naves  {
        //coordenadas posciones
        Dat coor1= new Dat (250,250);
        Dat coor2= new Dat (500,250);
+       
+       //coordenadas para la nave
+       Dat coor3= new Dat (475,500);
+       Dat coor4= new Dat (425,575);
+       Dat coor5= new Dat (525,575);
+       
+       HNave nave = new HNave(coor3,coor4,coor5,Color.blue);
+       
        //graficos 
        HAste h= new HAste(coor1,70,70,Color.BLACK);
        HDis h2= new HDis(coor2,50,Color.BLUE);
       
+       //objetos agregados 
+       obj.add(h);
+       obj.add(h2);
+       obj.add(nave); 
+        
        //Panel y ventana
        Pa p = new Pa (obj);
        Ventana v= new Ventana ("Gala Gala");
-        
-       obj.add(h);
-       obj.add(h2);
        
-     
        //propiedades de la ventana 
        v.add(p);
        v.setSize(800,600);
