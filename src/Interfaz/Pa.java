@@ -22,10 +22,10 @@ public class Pa extends JPanel implements KeyListener{
     Dat no = new Dat(0,0);    
     
     
-    ArrayList x;
+    ArrayList op;
     DibujaNave nave ;
     public Pa (ArrayList y){
-        this.x = y;
+        this.op = y;
         //escuchador para recibir entradas desde el panel
         this.addKeyListener(this);
         setFocusable(true);
@@ -40,8 +40,8 @@ public void paint (Graphics g){
     Graphics aux=Imagen.getGraphics();
     
     Tabla dib;
-    for(int i=0;i<x.size();i++){
-        dib=(Tabla)x.get(i);
+    for(int i=0;i<op.size();i++){
+        dib=(Tabla)op.get(i);
         dib.dibujar(aux);
     }
     g.drawImage(Imagen,0,0,null);
@@ -70,6 +70,12 @@ public void update(Graphics q){
          if(boton == KeyEvent.VK_LEFT){
              this.nave.mover(izq);
          }
+         //accion para disparar 
+         if(boton == KeyEvent.VK_X){
+             DibujarDiparos balas = nave.Bala();
+             nave.bal.add(balas);
+             op.add(balas);
+         }
     }
     
    
@@ -94,6 +100,14 @@ public void update(Graphics q){
      //metodo para iniciar el juego
      public void inicio(){
          while(true){
+             
+             try{
+                 if(!nave.bal.isEmpty()){
+                     nave.Movim();
+                     //metodo para mover la bala por todo el panel
+                 }
+                 Thread.sleep(50);
+             }catch(InterruptedException e){System.out.println(e);}
             repaint();
         }
      }

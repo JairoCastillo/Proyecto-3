@@ -11,7 +11,7 @@ package Interfaz;
 // esta clase sera la padre ya que las figuras heredaran sus coordenadas
 public class Dat {
     private float x;
-    private float y;
+    float y;
     
     public Dat(){
         this.x=0;

@@ -15,9 +15,9 @@ import java.awt.Graphics;
 public class DibujarAsteroide extends Asteroides implements Tabla{
     Color c;
 
-    public DibujarAsteroide(Dat coor,float x,float y,Color uncolor){
+    public DibujarAsteroide(Dat coor,float x,float y,Color xcolor){
         super(coor,x,y);
-        this.c= uncolor;
+        this.c= xcolor;
 }
 
     

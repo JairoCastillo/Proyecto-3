@@ -5,15 +5,19 @@
  */
 package Interfaz;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Usuario
  */
 public class ConsNave extends Dat{
+    //Creamos un arraylist
+    ArrayList bal = new ArrayList();
     //creamos nuevas coordenadas
     public Dat c1 = new Dat();
     public Dat c2= new Dat();
-
+    
 public ConsNave(){
     super();
     this.c1.setX(0);

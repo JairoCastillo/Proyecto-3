@@ -18,9 +18,9 @@ public class DibujaNave extends ConsNave implements Tabla{
   Color color;
   
  //coordenadas de la clase Dat 
-public DibujaNave(Dat a,Dat b,Dat c,Color uncolor){
+public DibujaNave(Dat a,Dat b,Dat c,Color xcolor){
     super(a,b,c);
-    this.color = uncolor;
+    this.color = xcolor;
 }
 
     @Override
@@ -41,14 +41,32 @@ public DibujaNave(Dat a,Dat b,Dat c,Color uncolor){
     
     }
     //creamos una nueva nave pero esta la pintamos para el movimiento sin rastro
-    public void paint(Graphics z, Color uncolor) {
-    z.setColor(uncolor);
+    public void paint(Graphics z, Color xcolor) {
+    z.setColor(xcolor);
     int x[] = {(int)this.getX(),(int)this.c1.getX(),(int)this.c2.getX()};    
     int y[] = {(int)this.getY(),(int)this.c1.getY(),(int)this.c2.getY()};    
         
         Polygon p = new Polygon(x,y,3);
         z.fillPolygon(p);
     
+    }
+    
+    public DibujarDiparos Bala(){
+        //aqui le asignamos las coordenas de donde inicia el objeto bala, en este caso inicia en la punta del triangulo
+        Dat s = new Dat(this.getX(),this.getY());
+        DibujarDiparos bal = new DibujarDiparos(s,10,Color.yellow);
+        return bal;
+    }
+    
+    //metodo para el
+    public void Movim(){
+        for(int i=0;i<this.bal.size();i++){
+            //casteamos los atos a la clase
+            DibujarDiparos e = (DibujarDiparos)this.bal.get(i);
+            //movimiento de la bala
+            float x= e.getY();
+            e.setY(x-= 6);
+        }
     }
 
 }

@@ -16,9 +16,9 @@ public class DibujarDiparos extends Disparos implements Tabla{
  
     Color color;
 
-public DibujarDiparos(Dat c,float radio, Color uncolor){
+public DibujarDiparos(Dat c,float radio, Color xcolor){
  super(c,radio);
- this.color = uncolor;
+ this.color = xcolor;
 }
     
  @Override
