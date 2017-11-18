@@ -44,23 +44,23 @@ public class Naves  {
       
       
        //arreglodat.add(aste);
-       arreglodat.add(dispa);
        arreglodat.add(nave);
      
+       arreglodat.add(dispa);
+      
        //coordenadas y rectangulo
        int rang1 = Ranmdom(800,50);
        Dat s1 = new Dat (rang1,-25);
        DibujarAsteroide asteroide1 = new DibujarAsteroide(s1,25,25,Color.black); 
-        
        int rang2 = Ranmdom(800,50);
        Dat s2 = new Dat (rang2,0);
-       DibujarAsteroide asteroide2 = new DibujarAsteroide(s2,25,25,Color.black); 
+       DibujarAsteroide asteroide2 = new DibujarAsteroide(s2,25,25,Color.orange); 
        int rang3 = Ranmdom(800,50);
        Dat s3 = new Dat (rang3,0);
        DibujarAsteroide asteroide3 = new DibujarAsteroide(s3,25,25,Color.black); 
        int rang4 = Ranmdom(800,50);
        Dat s4 = new Dat (rang4,0);
-       DibujarAsteroide asteroide4 = new DibujarAsteroide(s4,25,25,Color.black); 
+       DibujarAsteroide asteroide4 = new DibujarAsteroide(s4,25,25,Color.orange); 
        int rang5 = Ranmdom(800,50);
        Dat s5 = new Dat (rang5,0);
        DibujarAsteroide asteroide5 = new DibujarAsteroide(s5,25,25,Color.black); 

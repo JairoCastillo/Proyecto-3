@@ -10,6 +10,7 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.util.ArrayList;
 import javax.swing.JPanel;
+import static naves.Naves.Ranmdom;
 
 
 /**
@@ -121,7 +122,38 @@ public void update(Graphics q){
                      nave.Movim();
                      //metodo para mover la bala por todo el panel
                  }
-                 ;
+                 //metodo para capturar la coordenada y sumarla
+                 asteroide1.Movim();
+                 asteroide2.Movim();
+                 asteroide3.Movim();
+                 asteroide4.Movim();
+                 asteroide5.Movim();
+                   //creamos un condicional para q cuando lleguen a una coordenada limite este vuelva a inicio
+                 if(asteroide1.getY()>500){
+                     int a = Ranmdom(800,50);
+                     asteroide1.setY(0);
+                     asteroide1.setX(a);
+                 }
+                 if(asteroide2.getY()>500){
+                     int a = Ranmdom(800,50);
+                     asteroide2.setY(0);
+                     asteroide2.setX(a);
+                 }
+                 if(asteroide3.getY()>500){
+                     int a = Ranmdom(800,50);
+                     asteroide3.setY(0);
+                     asteroide3.setX(a);
+                 }
+                 if(asteroide4.getY()>500){
+                     int a = Ranmdom(800,50);
+                     asteroide4.setY(0);
+                     asteroide4.setX(a);
+                 }
+                 if(asteroide5.getY()>500){
+                     int a = Ranmdom(800,50);
+                     asteroide5.setY(0);
+                     asteroide5.setX(a);
+                 }
                  Thread.sleep(50);
              }catch(InterruptedException e){System.out.println(e);}
             repaint();

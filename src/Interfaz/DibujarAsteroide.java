@@ -27,5 +27,11 @@ public class DibujarAsteroide extends Asteroides implements Tabla{
         //solo con datos enteros
         z.fillRect((int)this.getX(),(int) this.getY(),(int)this.GetLa(1),(int)this.GetLa(2));
     }
+    
+    //creamos el metodo para sumar las coordenadas
+     public void Movim(){
+         float x = this.getY();
+         this.setY(x+=30);
+     }
 
 }
