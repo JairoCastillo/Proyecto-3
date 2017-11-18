@@ -12,12 +12,12 @@ import java.awt.Graphics;
  *
  * @author Usuario
  */
-public class DibujarDiparos extends Disparos implements Tabla {
+public class DibujarDiparos extends Disparos implements Tabla{
  
     Color color;
 
-public DibujarDiparos(Dat coor,float radio, Color uncolor){
- super(coor,radio);
+public DibujarDiparos(Dat c,float radio, Color uncolor){
+ super(c,radio);
  this.color = uncolor;
 }
     

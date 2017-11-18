@@ -41,7 +41,7 @@ public float GetLa(int la){
     if(la==2){
         return this.l2;
     }
-    if (la!=0 && la!=1){
+    if (la!=1 && la!=2){
         return 0;
     }
     return 0;

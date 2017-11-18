@@ -33,12 +33,26 @@ public class Pa extends JPanel implements KeyListener{
 
 public void paint (Graphics g){
     //creamos un objeto para dibujar mientras recorre el array y que toma parametros
-    Tabla di;
+    //pedimos la dimension de nuestra grafica
+    Dimension d= getSize();
+    Image Imagen = createImage(d.width,d.height);
+    //creamos un grafico auxiliar
+    Graphics aux=Imagen.getGraphics();
+    
+    Tabla dib;
     for(int i=0;i<x.size();i++){
-        di=(Tabla)x.get(i);
-        di.dibujar(g);
+        dib=(Tabla)x.get(i);
+        dib.dibujar(aux);
     }
+    g.drawImage(Imagen,0,0,null);
 }    
+
+//metodo para recibir graphics
+
+public void update(Graphics q){
+    paint(q);
+}
+
 
     @Override
     public void keyTyped(KeyEvent e) {
@@ -50,15 +64,10 @@ public void paint (Graphics g){
          int boton = e.getKeyCode();
          //condiciones de movimiento por teclas
          if(boton == KeyEvent.VK_RIGHT){
-             this.nave.paint(this.getGraphics(), Color.white);
-             this.nave.paint(this.getGraphics(), Color.black);
              this.nave.mover(der);
          
          }
          if(boton == KeyEvent.VK_LEFT){
-             //pintar al mover la nave
-             this.nave.paint(this.getGraphics(), Color.white);
-             this.nave.paint(this.getGraphics(), Color.black);
              this.nave.mover(izq);
          }
     }
@@ -66,7 +75,7 @@ public void paint (Graphics g){
    
     @Override
     public void keyReleased(KeyEvent e) {
-                 int boton = e.getKeyCode();
+          int boton = e.getKeyCode();
          //condiciones de movimiento por teclas
          if(boton == KeyEvent.VK_RIGHT){
              this.nave.mover(no);
@@ -82,4 +91,10 @@ public void paint (Graphics g){
         this.nave = q;
     } 
     
+     //metodo para iniciar el juego
+     public void inicio(){
+         while(true){
+            repaint();
+        }
+     }
 }

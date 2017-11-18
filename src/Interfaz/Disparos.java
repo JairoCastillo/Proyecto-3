@@ -34,7 +34,7 @@ public void setRadio(float r){
     this.r= r;
 }
 
-public Dat geC(){
+public Dat getC(){
     Dat q = new Dat(this.getX(),getY());
     return q;
 }
