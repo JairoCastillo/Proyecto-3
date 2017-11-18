@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package Interfaz;
-
+import Informacion.*;
 import java.awt.Color;
 import java.awt.event.WindowListener;
 import javax.swing.JFrame;

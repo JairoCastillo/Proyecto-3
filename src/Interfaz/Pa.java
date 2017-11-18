@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package Interfaz;
-
+import Informacion.*;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;

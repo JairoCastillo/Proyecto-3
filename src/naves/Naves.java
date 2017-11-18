@@ -10,7 +10,7 @@ import Interfaz.*;
 import java.awt.*;
 import java.util.ArrayList;
 import javax.swing.*;
-
+import Informacion.*;
 /**
  *
  * @author Usuario
