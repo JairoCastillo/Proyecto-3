@@ -14,17 +14,17 @@ import javax.swing.JPanel;
  */
 public class Pa extends JPanel {
     
-    ArrayList y;
+    ArrayList x;
     
-    public Pa (ArrayList x){
-        this.y= x;
+    public Pa (ArrayList y){
+        this.x = y;
     }
 
 public void paint (Graphics g){
     //creamos un objeto para dibujar mientras recorre el array y que toma parametros
     Tabla di;
-    for(int i=0;i<y.size();i++){
-        di=(Tabla)y.get(i);
+    for(int i=0;i<x.size();i++){
+        di=(Tabla)x.get(i);
         di.dibujar(g);
     }
 }    

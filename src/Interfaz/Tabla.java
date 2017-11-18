@@ -11,6 +11,7 @@ import java.awt.Graphics;
  *
  * @author Usuario
  */
+//clasepara crear objetos
 public interface Tabla {
     public void dibujar (Graphics z);
 }

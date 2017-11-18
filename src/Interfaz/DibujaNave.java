@@ -13,12 +13,12 @@ import java.awt.Color;
  *
  * @author Usuario
  */
-public class HNave extends ConsNave implements Tabla{
+public class DibujaNave extends ConsNave implements Tabla{
 //objeto con color
   Color color;
   
  //coordenadas de la clase Dat 
-public HNave(Dat a,Dat b,Dat c,Color uncolor){
+public DibujaNave(Dat a,Dat b,Dat c,Color uncolor){
     super(a,b,c);
     this.color = uncolor;
 }
@@ -35,9 +35,9 @@ public HNave(Dat a,Dat b,Dat c,Color uncolor){
     
     //creacion la figura para la nave
     //le damos los dos arreglos y el numero de vertices que tendra la figura
-        Polygon po = new Polygon(x,y,3);
+        Polygon p = new Polygon(x,y,3);
         //dibujamos la figura
-        z.fillPolygon(po);
+        z.fillPolygon(p);
     
     }
 }

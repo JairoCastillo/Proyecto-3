@@ -14,17 +14,17 @@ import java.awt.Graphics;
  */
 public class HDis extends Disparos implements Tabla {
  
-    Color co;
+    Color color;
 
 public HDis(Dat coor,float radio, Color uncolor){
  super(coor,radio);
- this.co = uncolor;
+ this.color = uncolor;
 }
     
  @Override
     public void dibujar(Graphics z) {
         //coordenadas para dibujar un circulo
-        z.setColor(co);
+        z.setColor(color);
         z.fillOval((int)(this.getX()-this.getRadio()),(int)(this.getY()-this.getRadio()),(int)(2*this.getRadio()),(int)(2*this.getRadio()));
     }
 }

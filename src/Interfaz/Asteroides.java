@@ -28,12 +28,12 @@ public Asteroides(Dat coor,float x,float y){
     this.l2=y;
 }
 
-public Asteroides(Asteroides q){
-    super(q.getX(),q.getY());
-    this.l1=q.l1;
-    this.l2=q.l2;
+public Asteroides(Asteroides nueva){
+    super(nueva.getX(),nueva.getY());
+    this.l1=nueva.l1;
+    this.l2=nueva.l2;
 }
-
+//retoramos los lados de la figura creada
 public float GetLa(int la){
     if(la==1){
         return this.l1;

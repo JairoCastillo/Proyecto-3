@@ -8,6 +8,7 @@ package Interfaz;
  *
  * @author Usuario
  */
+// esta clase sera la padre ya que las figuras heredaran sus coordenadas
 public class Dat {
     float x;
     float y;
@@ -21,9 +22,9 @@ public class Dat {
         this.y =y;
     }
     
-    public Dat(Dat q){
-        this.x = q.x;
-        this.y = q.y;
+    public Dat(Dat nueva){
+        this.x = nueva.x;
+        this.y = nueva.y;
     }
     
     public float getX(){
@@ -41,5 +42,4 @@ public class Dat {
     public void setY(float y){
        this.y= y;
     }
-
 }

@@ -24,7 +24,7 @@ public class HAste extends Asteroides implements Tabla{
     public void dibujar(Graphics z) {
         z.setColor(c);
         //solo con datos enteros
-        z.fillOval((int)this.getX(),(int) this.getY(),(int)this.GetLa(1),(int)this.GetLa(2));
+        z.fillRect((int)this.getX(),(int) this.getY(),(int)this.GetLa(1),(int)this.GetLa(2));
     }
 
 }

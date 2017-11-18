@@ -17,8 +17,8 @@ public Disparos (){
     this.r=0;
 }
 
-public Disparos(Dat q,float ra){
-    super(q);
+public Disparos(Dat nueva,float ra){
+    super(nueva);
     this.r = r;
 }
 //copia
@@ -30,15 +30,13 @@ public Disparos(Disparos c){
 public float getRadio(){
     return this.r;
 }
-public void setRadio(float rd){
-    this.r= rd;
+public void setRadio(float r){
+    this.r= r;
 }
 
 public Dat geC(){
-    Dat q = new Dat(this.getX(),getY())  ;
+    Dat q = new Dat(this.getX(),getY());
     return q;
 }
-
-
 
 }

@@ -18,9 +18,9 @@ public class Ventana extends JFrame implements WindowListener{
     
     public Ventana (String superior){
         super(superior);
-        setSize(800,600);
+        setSize(500,500);
         addWindowListener(this);
-        setBackground(Color.WHITE);
+        setBackground(Color.white);
     }
 
     @Override
@@ -30,12 +30,12 @@ public class Ventana extends JFrame implements WindowListener{
 
     @Override
     public void windowClosing(WindowEvent e) {
-  
+     System.exit(0);
+    
     }
 
     @Override
     public void windowClosed(WindowEvent e) {
-       System.exit(0);
     }
 
     @Override
