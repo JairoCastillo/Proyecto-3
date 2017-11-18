@@ -27,6 +27,9 @@ public class Dat {
         this.y = nueva.y;
     }
     
+    
+   
+    
     public float getX(){
         return this.x;
     }
@@ -41,5 +44,17 @@ public class Dat {
     
     public void setY(float y){
        this.y= y;
+    }
+    
+    //metodo suma para la clase consnave
+     public Dat suma(Dat e){
+      float sx = this.x+e.getX();
+      float sy =this.y+e.getY();
+      
+      //guardamos los metodos
+      
+      Dat s= new Dat(sx,sy);
+      
+      return s;
     }
 }

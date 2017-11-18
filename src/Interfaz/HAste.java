@@ -20,6 +20,7 @@ public class HAste extends Asteroides implements Tabla{
         this.c= uncolor;
 }
 
+    
     @Override
     public void dibujar(Graphics z) {
         z.setColor(c);

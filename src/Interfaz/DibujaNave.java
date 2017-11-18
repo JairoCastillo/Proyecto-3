@@ -40,4 +40,15 @@ public DibujaNave(Dat a,Dat b,Dat c,Color uncolor){
         z.fillPolygon(p);
     
     }
+    //creamos una nueva nave pero esta la pintamos para el movimiento sin rastro
+    public void paint(Graphics z, Color uncolor) {
+    z.setColor(uncolor);
+    int x[] = {(int)this.getX(),(int)this.c1.getX(),(int)this.c2.getX()};    
+    int y[] = {(int)this.getY(),(int)this.c1.getY(),(int)this.c2.getY()};    
+        
+        Polygon p = new Polygon(x,y,3);
+        z.fillPolygon(p);
+    
+    }
+
 }

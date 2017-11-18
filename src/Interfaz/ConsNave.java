@@ -45,7 +45,7 @@ public ConsNave(Dat a,Dat b,Dat c){
         this.c2.setY(c.getX());
     }
     //modificar los vertices para mover nuestra nave
-    public void SetVerticesNave(Dat q,int lado){
+    public void setVerticesNave(Dat q,int lado){
         //modificamos sus lados
          if(lado==1){
              this.setX(q.getX());
@@ -61,4 +61,15 @@ public ConsNave(Dat a,Dat b,Dat c){
              this.c2.setX(q.getY());
          }
     }
+    //metodo para mover nuestra nave 
+    public void  mover(Dat nuevoDat){
+        //llamamos la funcion del vertice
+        setVerticesNave((this.suma(nuevoDat)),1);
+        setVerticesNave((this.c1.suma(nuevoDat)),2);
+        setVerticesNave((this.c2.suma(nuevoDat)),3);
+        //creamos un metodo de la suma en la clase Dat
+        
+    }
+    
+    
 }
