@@ -5,10 +5,14 @@
  */
 package Interfaz;
 
+import Interfaz.ConsNave;
+import Interfaz.Dat;
+import Interfaz.DibujarDiparos;
+import Interfaz.Tabla;
 import java.awt.Polygon;
 import java.awt.Graphics;
 import java.awt.Color;
-
+import Interfaz.*;
 /**
  *
  * @author Usuario
