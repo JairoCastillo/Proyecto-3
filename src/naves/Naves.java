@@ -39,10 +39,12 @@ public class Naves  {
        DibujaNave nave = new DibujaNave(coor3,coor4,coor5,Color.red);
         
        //objetos agrega 
-     //  arreglodat.add(h);
-     //  arreglodat.add(j);
+     arreglodat.add(h);
+       arreglodat.add(j);
        arreglodat.add(nave); 
        Pa p = new Pa (arreglodat);
+       
+       p.lNave(nave);
        
        //propiedades de la ventana 
        ventanita.add(p);
