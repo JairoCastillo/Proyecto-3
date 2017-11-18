@@ -28,8 +28,8 @@ public class Naves  {
        Dat coor1= new Dat (250,250);
        Dat coor2= new Dat (500,250);
        //graficos 
-       HAste h= new HAste(coor1,70,70,Color.BLUE);
-       HDis j= new HDis(coor2,50,Color.BLACK);
+       DibujarAsteroide h= new DibujarAsteroide(coor1,70,70,Color.BLUE);
+       DibujarDiparos j= new DibujarDiparos(coor2,50,Color.BLACK);
       
        //coordenadas para la nave
        Dat coor3= new Dat (475,500);

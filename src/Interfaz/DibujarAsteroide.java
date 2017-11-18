@@ -12,10 +12,10 @@ import java.awt.Graphics;
  *
  * @author Usuario
  */
-public class HAste extends Asteroides implements Tabla{
+public class DibujarAsteroide extends Asteroides implements Tabla{
     Color c;
 
-    public HAste(Dat coor,float x,float y,Color uncolor){
+    public DibujarAsteroide(Dat coor,float x,float y,Color uncolor){
         super(coor,x,y);
         this.c= uncolor;
 }
