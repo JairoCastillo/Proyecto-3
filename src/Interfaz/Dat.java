@@ -10,8 +10,8 @@ package Interfaz;
  */
 // esta clase sera la padre ya que las figuras heredaran sus coordenadas
 public class Dat {
-    float x;
-    float y;
+    private float x;
+    private float y;
     
     public Dat(){
         this.x=0;
@@ -26,9 +26,6 @@ public class Dat {
         this.x = nueva.x;
         this.y = nueva.y;
     }
-    
-    
-   
     
     public float getX(){
         return this.x;
@@ -46,7 +43,7 @@ public class Dat {
        this.y= y;
     }
     
-    //metodo suma para la clase consnave
+    //metodo suma para la clase Consnave
      public Dat suma(Dat e){
       float sx = this.x+e.getX();
       float sy =this.y+e.getY();
