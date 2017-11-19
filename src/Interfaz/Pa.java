@@ -20,10 +20,9 @@ import static naves.Naves.Ranmdom;
 public class Pa extends JPanel implements KeyListener{
     ArrayList op;
     DibujaNave nave ;
-    //Definimos coordenadas
+    //Definimos coordenadas y movimiento nulo cuando soltemos la tecla
     Dat der = new Dat(30,0);    
     Dat izq = new Dat(-30,0);    
-    //movimiento nulo cuando soltemos la tecla
     Dat no = new Dat(0,0);    
     
     //creamos los asteroides
@@ -32,7 +31,10 @@ public class Pa extends JPanel implements KeyListener{
     DibujarAsteroide asteroide3;
     DibujarAsteroide asteroide4;
     DibujarAsteroide asteroide5;
-   
+    
+    textos puntos;
+    textos vidas;
+    textos gameover;
     public Pa (ArrayList y){
         this.op = y;
         //escuchador para recibir entradas desde el panel
@@ -47,8 +49,8 @@ public void paint (Graphics g){
     Image Imagen = createImage(d.width,d.height);
     //creamos un grafico auxiliar
     Graphics aux=Imagen.getGraphics();
-    
     Tabla dib;
+    
     for(int i=0;i<op.size();i++){
         dib=(Tabla)op.get(i);
         dib.dibujar(aux);
@@ -112,7 +114,17 @@ public void update(Graphics q){
      public void  lNave(DibujaNave q){
         this.nave = q;
     } 
-    
+     
+     //vidas dinamicas
+     public void lpuntos(textos a){
+            this.puntos= a;
+}
+     public void lvidas(textos q){
+         this.vidas = q;
+}
+      public void lgameover(textos w){
+          this.gameover = w;
+}
      //metodo para iniciar el juego
      public void inicio(){
          while(true){
