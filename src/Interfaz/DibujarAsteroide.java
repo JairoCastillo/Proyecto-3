@@ -25,7 +25,8 @@ public class DibujarAsteroide extends Asteroides implements Tabla{
     public void dibujar(Graphics z) {
         z.setColor(c);
         //solo con datos enteros
-        z.fillRect((int)this.getX(),(int) this.getY(),(int)this.GetLa(1),(int)this.GetLa(2));
+        z.fillOval((int)this.getX(),(int) this.getY(),(int)this.GetLa(1),(int)this.GetLa(2));
+        
     }
     
     //creamos el metodo para sumar las coordenadas

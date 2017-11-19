@@ -20,7 +20,7 @@ public class Ventana extends JFrame implements WindowListener{
         super(superior);
         setSize(1000,500);
         addWindowListener(this);
-        setBackground(Color.white);
+        setBackground(Color.BLACK);
     }
 
     @Override

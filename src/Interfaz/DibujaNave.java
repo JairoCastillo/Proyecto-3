@@ -5,10 +5,6 @@
  */
 package Interfaz;
 import Informacion.*;
-import Interfaz.ConsNave;
-import Interfaz.Dat;
-import Interfaz.DibujarDiparos;
-import Interfaz.Tabla;
 import java.awt.Polygon;
 import java.awt.Graphics;
 import java.awt.Color;
@@ -40,7 +36,6 @@ public DibujaNave(Dat a,Dat b,Dat c,Color xcolor){
     //creacion la figura para la nave
     //le damos los dos arreglos y el numero de vertices que tendra la figura
         Polygon p = new Polygon(x,y,3);
-        //dibujamos la figura
         z.fillPolygon(p);
     
     }
@@ -50,8 +45,8 @@ public DibujaNave(Dat a,Dat b,Dat c,Color xcolor){
     int x[] = {(int)this.getX(),(int)this.c1.getX(),(int)this.c2.getX()};    
     int y[] = {(int)this.getY(),(int)this.c1.getY(),(int)this.c2.getY()};    
         
-        Polygon p = new Polygon(x,y,3);
-        z.fillPolygon(p);
+    Polygon p = new Polygon(x,y,3);
+    z.fillPolygon(p);
     
     }
     
