@@ -17,19 +17,17 @@ import static naves.Principal.Ranmdom;
  */
 public class Pa extends JPanel implements KeyListener{
     ArrayList op;
+    //creamos un arraya para guardar todos los asteroides
+    ArrayList asteroides = new ArrayList();
     DibujaNave nave;
     //Definimos coordenadas y movimiento nulo cuando soltemos la tecla
     Dat der = new Dat(25,0);    
     Dat izq = new Dat(-25,0);    
     Dat no = new Dat(0,0);    
     
-    //creamos los asteroides
-    DibujarAsteroide asteroide1;
-    DibujarAsteroide asteroide2;
-    DibujarAsteroide asteroide3;
-    DibujarAsteroide asteroide4;
-    DibujarAsteroide asteroide5;
-    
+    //contador para restar los asteroides por si se presentan colisiones
+   int contAsteroides = 5; 
+   
     textos puntos;
     textos vidas;
     textos gameover;
@@ -107,13 +105,13 @@ public void update(Graphics q){
     
     //asignamos por parametros los asteroides
      public void lAste(DibujarAsteroide a,DibujarAsteroide b,DibujarAsteroide c,DibujarAsteroide d,DibujarAsteroide e){
-          asteroide1= a;
-          asteroide2= b;
-          asteroide3= c;
-          asteroide4= d;
-          asteroide5= e;
+         asteroides.add(a);
+         asteroides.add(b); 
+         asteroides.add(c); 
+         asteroides.add(d); 
+         asteroides.add(e); 
+  
    }
-    //
      
      //vidas dinamicas
      public void lpuntos(textos a){
@@ -125,7 +123,31 @@ public void update(Graphics q){
       public void lgameover(textos w){
           this.gameover = w;
 }
-     //metodo para iniciar el juego
+      
+
+public void Colision(){
+    int i,j; 
+    for(i=0;i<nave.bal.size();i++){
+            DibujarDiparos bala = (DibujarDiparos) nave.bal.get(i);
+                for(j=0;j<asteroides.size();j++){
+                         DibujarDiparos aste = (DibujarDiparos) nave.bal.get(j);
+                         
+                         Dat coorbala = new Dat(bala.getX(),bala.getY());
+                         Dat corder = new Dat(aste.getX()+30,aste.getY());
+                         Dat corizq = new Dat(aste.getX()-15,aste.getY());
+                         Dat corcen = new Dat(aste.getX(),aste.getY());
+                  if(coorbala.getX() > corizq.getX() && coorbala.getX() < corder.getX() && coorbala.getY() < corcen.getY()){
+                      aste.pintar(Color.BLACK);
+                      bala.pintar(Color.BLACK);
+                      bala.setY(-100);
+                      aste.setY(-100);
+                      nave.bal.remove(bala);
+                      asteroides.remove(aste);
+                    contAsteroides--;
+                  }       
+                }
+     }
+}      
      public void inicio(){
          while(true){
              
@@ -133,42 +155,30 @@ public void update(Graphics q){
                  if(!nave.bal.isEmpty()){
                      nave.Movim();
                      //metodo para mover la bala por todo el panel
-                 }
-                 //metodo para capturar la coordenada y sumarla
-                 asteroide1.Movim();
-                 asteroide2.Movim();
-                 asteroide3.Movim();
-                 asteroide4.Movim();
-                 asteroide5.Movim();
-                   //creamos un condicional para q cuando lleguen a una coordenada limite este vuelva a inicio
-                 if(asteroide1.getY()>500){
+                     }
+                for(int i=0;i<asteroides.size();i++){
+                     DibujarAsteroide rect = (DibujarAsteroide) asteroides.get(i);
+                     rect.Movim();
+                  if(rect.getY()>525){
                      int a = Ranmdom(800,50);
-                     asteroide1.setY(0);
-                     asteroide1.setX(a);
-                 }
-                 if(asteroide2.getY()>500){
-                     int a = Ranmdom(800,50);
-                     asteroide2.setY(0);
-                     asteroide2.setX(a);
-                 }
-                 if(asteroide3.getY()>500){
-                     int a = Ranmdom(800,50);
-                     asteroide3.setY(0);
-                     asteroide3.setX(a);
-                 }
-                 if(asteroide4.getY()>500){
-                     int a = Ranmdom(800,50);
-                     asteroide4.setY(0);
-                     asteroide4.setX(a);
-                 }
-                 if(asteroide5.getY()>500){
-                     int a = Ranmdom(800,50);
-                     asteroide5.setY(0);
-                     asteroide5.setX(a);
-                 }
-                 Thread.sleep(90);
+                     rect.setY(0);
+                     rect.setX(a);
+                    }
+                }
+                    if(contAsteroides < 5){
+                        int a = Ranmdom (800,50);
+                        Dat Inicio = new Dat(a,0);
+                        DibujarAsteroide nuevo = new DibujarAsteroide(Inicio,25,25,Color.GREEN);
+                        asteroides.add(nuevo);
+                        op.add(nuevo);
+                        nuevo.Movim();
+                        contAsteroides++;
+                    } 
+                    Colision();
+                    Thread.sleep(90);
              }catch(InterruptedException e){System.out.println(e);}
             repaint();
         }
      }
+
 }

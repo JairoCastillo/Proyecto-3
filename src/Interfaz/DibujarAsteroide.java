@@ -20,7 +20,6 @@ public class DibujarAsteroide extends Asteroides implements Tabla{
         this.c= xcolor;
 }
 
-    
     @Override
     public void dibujar(Graphics z) {
         z.setColor(c);
@@ -35,4 +34,8 @@ public class DibujarAsteroide extends Asteroides implements Tabla{
          this.setY(x+=30);
      }
 
+     void pintar(Color a){
+         this.c = a;
+     }
+     
 }

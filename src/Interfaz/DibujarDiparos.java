@@ -26,4 +26,10 @@ public DibujarDiparos(Dat c,float radio, Color xcolor){
         z.setColor(color);
         z.drawOval((int)(this.getX()-this.getRadio()),(int)(this.getY()-this.getRadio()),(int)(2*this.getRadio()),(int)(2*this.getRadio()));
     }
+
+    void pintar(Color a) {
+        this.color = a;
+    }
+
+  
 }
