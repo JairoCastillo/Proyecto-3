@@ -29,8 +29,8 @@ public class Principal  {
       // Arreglo para el panel
       ArrayList arreglodat = new ArrayList ();
       //disparo
-      Dat coor2= new Dat(400,250);
-      DibujarDiparos dispa= new DibujarDiparos(coor2,26, Color.BLUE);
+      //Dat coor2= new Dat(500,250);
+      //DibujarDiparos dispa= new DibujarDiparos(coor2,100,Color.GREEN);
       
       // nave
       Dat c3= new Dat(475,500);
@@ -83,13 +83,13 @@ public class Principal  {
        arreglodat.add(asteroide4);
        arreglodat.add(asteroide5);
        
-       Pa p = new Pa (arreglodat);
-       p.lNave(nave);
-       p.lAste(asteroide1,asteroide2,asteroide3,asteroide4,asteroide5);
+       Pa panelsito = new Pa (arreglodat);
+       panelsito.lNave(nave);
+       panelsito.lAste(asteroide1,asteroide2,asteroide3,asteroide4,asteroide5);
        //propiedades de la ventana 
-       ventanita.add(p);
+       ventanita.add(panelsito);
        ventanita.setSize(900,600);
        ventanita.setVisible(true);
-       p.inicio();
+       panelsito.inicio();
     }
 }

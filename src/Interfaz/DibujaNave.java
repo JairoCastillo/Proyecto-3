@@ -40,7 +40,8 @@ public DibujaNave(Dat a,Dat b,Dat c,Color xcolor){
     
     }
     //creamos una nueva nave pero esta la pintamos para el movimiento sin rastro
-    public void paint(Graphics z, Color xcolor) {
+    public void paint(Graphics z,Color xcolor) {
+   
     z.setColor(xcolor);
     int x[] = {(int)this.getX(),(int)this.c1.getX(),(int)this.c2.getX()};    
     int y[] = {(int)this.getY(),(int)this.c1.getY(),(int)this.c2.getY()};    
@@ -54,7 +55,7 @@ public DibujaNave(Dat a,Dat b,Dat c,Color xcolor){
     public DibujarDiparos Bala(){
         //aqui le asignamos las coordenas de donde inicia el objeto bala, en este caso inicia en la punta del triangulo
         Dat sal = new Dat(this.getX(),this.getY());
-        DibujarDiparos bal = new DibujarDiparos(sal,10,Color.BLUE);
+        DibujarDiparos bal = new DibujarDiparos(sal,60,Color.GREEN);
         return bal;
     }
     

@@ -17,14 +17,13 @@ public class DibujarDiparos extends Disparos implements Tabla{
     Color color;
 
 public DibujarDiparos(Dat c,float radio, Color xcolor){
- super(c,radio);
- this.color = xcolor;
+    super(c,radio);
+    this.color = xcolor;
 }
     
  @Override
     public void dibujar(Graphics z) {
-        //coordenadas para dibujar un circulo
         z.setColor(color);
-        z.fillOval((int)(this.getX()-this.getRadio()),(int)(this.getY()-this.getRadio()),(int)(2*this.getRadio()),(int)(2*this.getRadio()));
+        z.drawOval((int)(this.getX()-this.getRadio()),(int)(this.getY()-this.getRadio()),(int)(2*this.getRadio()),(int)(2*this.getRadio()));
     }
 }

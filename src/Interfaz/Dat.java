@@ -46,14 +46,14 @@ public class Dat {
     
     //metodo suma para la clase Consnave
      public Dat suma(Dat e){
-      float sx = this.x+e.getX();
-      float sy =this.y+e.getY();
+      float sumx = this.x+e.getX();
+      float sumy =this.y+e.getY();
       
       //guardamos los metodos
       
-      Dat s= new Dat(sx,sy);
+      Dat cor= new Dat(sumx,sumy);
       
-      return s;
+      return cor;
     }
      
 }

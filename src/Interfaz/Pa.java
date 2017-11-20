@@ -17,10 +17,10 @@ import static naves.Principal.Ranmdom;
  */
 public class Pa extends JPanel implements KeyListener{
     ArrayList op;
-    DibujaNave nave ;
+    DibujaNave nave;
     //Definimos coordenadas y movimiento nulo cuando soltemos la tecla
-    Dat der = new Dat(30,0);    
-    Dat izq = new Dat(-30,0);    
+    Dat der = new Dat(25,0);    
+    Dat izq = new Dat(-25,0);    
     Dat no = new Dat(0,0);    
     
     //creamos los asteroides
@@ -45,39 +45,36 @@ public void paint (Graphics g){
     //pedimos la dimension de nuestra grafica
     Dimension d= getSize();
     Image Imagen = createImage(d.width,d.height);
-    //creamos un grafico auxiliar
-    Graphics aux=Imagen.getGraphics();
+    //creamos un grafico auxiliar llamdo buff
+    Graphics buff=Imagen.getGraphics();
     Tabla dib;
     
     for(int i=0;i<op.size();i++){
         dib=(Tabla)op.get(i);
-        dib.dibujar(aux);
+        dib.dibujar(buff);
     }
     g.drawImage(Imagen,0,0,null);
 }    
 
-//metodo para recibir graphics
 
+//metodo para recibir graphics para llamar
 public void update(Graphics q){
     paint(q);
 }
 
-
     @Override
     public void keyTyped(KeyEvent e) {
-    
     }
-
     @Override
     public void keyPressed(KeyEvent e) {
          int boton = e.getKeyCode();
          //condiciones de movimiento por teclas
-         if(boton == KeyEvent.VK_RIGHT){
-             this.nave.mover(der);
-         
-         }
          if(boton == KeyEvent.VK_LEFT){
              this.nave.mover(izq);
+             
+         }
+         if(boton == KeyEvent.VK_RIGHT){
+             this.nave.mover(der);
          }
          //accion para disparar 
          if(boton == KeyEvent.VK_X){
@@ -94,13 +91,21 @@ public void update(Graphics q){
          //condiciones de movimiento por teclas
          if(boton == KeyEvent.VK_RIGHT){
              this.nave.mover(no);
-        
+              
          }
          if(boton == KeyEvent.VK_LEFT){
-             this.nave.mover(no);
+            this.nave.mover(no);
+             
          }
     
-    }   //asignamos por parametros los asteroides
+    }
+     public void lNave(DibujaNave q){
+        this.nave = q;
+    } 
+    
+
+    
+    //asignamos por parametros los asteroides
      public void lAste(DibujarAsteroide a,DibujarAsteroide b,DibujarAsteroide c,DibujarAsteroide d,DibujarAsteroide e){
           asteroide1= a;
           asteroide2= b;
@@ -108,10 +113,7 @@ public void update(Graphics q){
           asteroide4= d;
           asteroide5= e;
    }
-    
-     public void  lNave(DibujaNave q){
-        this.nave = q;
-    } 
+    //
      
      //vidas dinamicas
      public void lpuntos(textos a){
