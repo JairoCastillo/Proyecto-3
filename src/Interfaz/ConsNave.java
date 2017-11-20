@@ -12,16 +12,17 @@ import java.util.ArrayList;
  * @author Usuario
  */
 public class ConsNave extends Dat{
-    //Creamos un arraylist
+    //Creamos un arraylist para las balas
     ArrayList bal = new ArrayList();
     //creamos nuevas coordenadas
-    public Dat c1 = new Dat();
-    public Dat c2= new Dat();
+    public Dat c1 = new Dat(); //coordenada izquierda
+    public Dat c2= new Dat(); //coordenada derecha
     
 public ConsNave(){
     super();
     this.c1.setX(0);
     this.c1.setY(0);
+    
     this.c2.setX(0);
     this.c2.setY(0);
 }
@@ -33,8 +34,8 @@ public ConsNave(Dat a,Dat b,Dat c){
     this.c1.setX(b.getX());
     this.c1.setY(b.getY());
     
-    this.c2.setX(b.getX());
-    this.c2.setY(b.getY());
+    this.c2.setX(c.getX());
+    this.c2.setY(c.getY());
 }
     //si creamos otra nave por parametro
     //coordenadas de c set y get

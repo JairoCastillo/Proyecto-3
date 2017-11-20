@@ -15,7 +15,7 @@ import Informacion.*;
  *
  * @author Usuario
  */
-public class Naves  {
+public class Principal  {
     // en esta funcion enviamos un rango y nos da un numero entre ese rango
     public static int Ranmdom(int max,int min){
         return(int)(Math.random()*(max-min));
@@ -92,5 +92,4 @@ public class Naves  {
        ventanita.setVisible(true);
        p.inicio();
     }
-    
 }

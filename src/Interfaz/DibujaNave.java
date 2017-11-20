@@ -46,14 +46,15 @@ public DibujaNave(Dat a,Dat b,Dat c,Color xcolor){
     int y[] = {(int)this.getY(),(int)this.c1.getY(),(int)this.c2.getY()};    
         
     Polygon p = new Polygon(x,y,3);
+   
     z.fillPolygon(p);
-    
+   
     }
     
     public DibujarDiparos Bala(){
         //aqui le asignamos las coordenas de donde inicia el objeto bala, en este caso inicia en la punta del triangulo
-        Dat s = new Dat(this.getX(),this.getY());
-        DibujarDiparos bal = new DibujarDiparos(s,10,Color.yellow);
+        Dat sal = new Dat(this.getX(),this.getY());
+        DibujarDiparos bal = new DibujarDiparos(sal,10,Color.BLUE);
         return bal;
     }
     
@@ -61,11 +62,10 @@ public DibujaNave(Dat a,Dat b,Dat c,Color xcolor){
     public void Movim(){
         for(int i=0;i<this.bal.size();i++){
             //casteamos los atos a la clase
-            DibujarDiparos e = (DibujarDiparos)this.bal.get(i);
+            DibujarDiparos y = (DibujarDiparos)this.bal.get(i);
             //movimiento de la bala
-            float x= e.getY();
-            e.setY(x-= 6);
+            float x= y.getY();
+            y.setY(x-= 6);
         }
     }
-
 }

@@ -10,9 +10,7 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.util.ArrayList;
 import javax.swing.JPanel;
-import static naves.Naves.Ranmdom;
-
-
+import static naves.Principal.Ranmdom;
 /**
  *
  * @author Usuario
@@ -86,7 +84,7 @@ public void update(Graphics q){
              DibujarDiparos balas = nave.Bala();
              nave.bal.add(balas);
              op.add(balas);
-         }
+         } 
     }
     
    
@@ -166,7 +164,7 @@ public void update(Graphics q){
                      asteroide5.setY(0);
                      asteroide5.setX(a);
                  }
-                 Thread.sleep(50);
+                 Thread.sleep(90);
              }catch(InterruptedException e){System.out.println(e);}
             repaint();
         }
