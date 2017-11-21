@@ -130,7 +130,7 @@ public void Colision(){
     for(i=0;i<nave.bal.size();i++){
             DibujarDiparos bala = (DibujarDiparos) nave.bal.get(i);
                 for(j=0;j<asteroides.size();j++){
-                         DibujarDiparos aste = (DibujarDiparos) nave.bal.get(j);
+                         DibujarAsteroide aste = (DibujarAsteroide) asteroides.get(j);
                          
                          Dat coorbala = new Dat(bala.getX(),bala.getY());
                          Dat corder = new Dat(aste.getX()+30,aste.getY());
@@ -175,7 +175,7 @@ public void Colision(){
                         contAsteroides++;
                     } 
                     Colision();
-                    Thread.sleep(90);
+                    Thread.sleep(150);
              }catch(InterruptedException e){System.out.println(e);}
             repaint();
         }
