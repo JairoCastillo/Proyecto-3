@@ -54,16 +54,16 @@ public ConsNave(Dat a,Dat b,Dat c){
         //modificamos sus lados
          if(lado==1){
              this.setX(q.getX());
-             this.setX(q.getY());
+             this.setY(q.getY());
          
          }
          if(lado==2){
              this.c1.setX(q.getX());
-             this.c1.setX(q.getY());
+             this.c1.setY(q.getY());
          }
          if(lado==3){
              this.c2.setX(q.getX());
-             this.c2.setX(q.getY());
+             this.c2.setY(q.getY());
          }
     }
     //metodo para mover nuestra nave 
