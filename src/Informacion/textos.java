@@ -22,9 +22,9 @@ public class textos implements Tabla{
     int altoP;
     int size;
 
-    public textos(String hola, Color unColor, int a, int h) {
+    public textos(String hola, Color xColor, int a, int h) {
         this.s = hola;
-        this.c = unColor;
+        this.c = xColor;
         this.size = 10;
         this.anchoP = a;
         this.altoP = h;
@@ -70,4 +70,9 @@ public class textos implements Tabla{
     public int getSize(){
         return size;
     }  
+
+    public void setColor(Color a){
+    this.c = a;
+    };    
 }
+

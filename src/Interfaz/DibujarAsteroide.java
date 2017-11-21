@@ -29,9 +29,9 @@ public class DibujarAsteroide extends Asteroides implements Tabla{
     }
     
     //creamos el metodo para sumar las coordenadas
-     public void Movim(){
+     public void Movim(int mov){
          float x = this.getY();
-         this.setY(x+=30);
+         this.setY(x+=mov);
      }
 
      void pintar(Color a){
